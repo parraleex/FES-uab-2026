@@ -7,9 +7,15 @@
 # Crea variables per desar el nom d'un encaminador, la seva ubicació,
 # el nombre de ports i si està encès. Mostra les dades en una frase
 # utilitzant una f-string.
+nom = "Terminator"
+ubi = "P1"
+ports = 3
+ences = False
+print(f"Encaminador: {nom} ; Ubicació: {ubi} ; Nombre de ports: {ports} ; Està encés? {ences}")
 
 # Exercici 2
 # Crea variables per desar els GB inclosos en un pla de dades mòbils
 # i els GB consumits. Calcula quants GB queden i mostra el resultat.
 # Després, actualitza el consum amb un valor nou i torna a calcular
 # quants GB queden.
+

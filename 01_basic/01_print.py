@@ -18,11 +18,11 @@
 # print("Python", "és", "brutal", sep = "-")
 
 # El paràmetre 'end' defineix què s'imprimeix al final de la línia
-print("Això s'imprimeix", end = "\n") # Aquí, 'end' té un salt de línia explícit
-print("en una línia") # Això s'imprimeix a la línia següent
+# print("Això s'imprimeix", end = "\n") # Aquí, 'end' té un salt de línia explícit
+# print("en una línia") # Això s'imprimeix a la línia següent
 
 # També es poden imprimir números directament
-print(42)
+# print(42)
 # print(3+2)
 # Exemple de com imprimir el símbol de polzada (")
 # Si utilitzem cometes dobles dins d'una cadena amb cometes dobles, es produeix un error:
