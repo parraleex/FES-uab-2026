@@ -19,3 +19,11 @@ print(f"Encaminador: {nom} ; Ubicació: {ubi} ; Nombre de ports: {ports} ; Està
 # Després, actualitza el consum amb un valor nou i torna a calcular
 # quants GB queden.
 
+gb_inclosos = 50
+gb_consumits = 15
+finals = gb_inclosos - gb_consumits
+print(f"Queden {finals} GB")
+
+gb_consumits = 30
+finals = gb_inclosos - gb_consumits
+print(f"Queden {finals} GB")
