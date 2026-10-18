@@ -29,17 +29,29 @@ print(f"Llista intercanviada: {nombres}")
 # pa_de_sota = ["pa de sota"]
 # Crea una llista anomenada entrepa que contingui, en aquest ordre, el pa de dalt,
 # els ingredients i el pa de sota.
+pa_de_dalt = ["pa de dalt"]
+ingredients = ["pernil", "formatge", "tomaquet"]
+pa_de_sota = ["pa de sota"]
+entrepa = pa_de_dalt + ingredients + pa_de_sota
+print(entrepa)
 
 # Exercici 4: Duplicar una llista
 # Donada una llista:
 # llista = [1, 2, 3]
 # Crea una llista nova que contingui duplicats els elements de la llista original.
 # Exemple: [1, 2, 3] -> [1, 2, 3, 1, 2, 3]
+llista = [1, 2, 3]
+llista_duplicada = llista + llista
+print(llista_duplicada)
 
 # Exercici 5: Extreure l'element central
 # Donada una llista amb un nombre senar d'elements, extreu-ne l'element central
 # fent servir slicing.
 # Exemple: llista = [10, 20, 30, 40, 50] -> L'element central és 30
+llista = [10, 20, 30, 40, 50]
+meitat = len(llista) // 2
+element_central = llista[meitat]
+print(f"L'element central és {element_central}")
 
 # Exercici 6: Inversió parcial
 # Donada una llista, inverteix-ne només la primera meitat (fent servir slicing
