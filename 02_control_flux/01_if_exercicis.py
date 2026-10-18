@@ -9,28 +9,73 @@
 # - Entre -75 dBm i menys de -67 dBm: feble
 # - Inferior a -75 dBm: molt feble
 
+senyal = float(input("Senyal rebut: "))
+if senyal >= -50:
+    print("Excel·lent")
+elif senyal >= -67:
+    print("Bona")
+elif senyal >= -75:
+    print("Feble")
+else:
+    print("Molt feble")
+
 
 # Exercici 2: Nivell de recepció d'una connexió de fibra òptica
 # Demana la potència òptica rebuda en dBm. Per a aquest exercici, considera
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
 # Indica si el nivell és massa baix, acceptable o massa alt.
 
+potencia = float(input("Potència òptica (en dBm): "))
+if potencia >= -27 and potencia <= -8:
+    print("Acceptable")
+elif potencia < -27:
+    print("Massa baix")
+else:
+    print("Massa alt")
+
 # Exercici 3: Consum mensual de dades mòbils
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
 # Indica si el consum és dins del límit o si l'ha superat; en aquest últim cas,
 # calcula quants GB addicionals s'han consumit.
+
+pla = 20
+consum = float(input("Consum de dades (en GB): "))
+if consum <= pla:
+    print("El consum és dins del límit")
+else:
+    adicionals = consum - pla
+    print(f"Ha consumit {adicionals} GB adicionals")
+
 
 # Exercici 4: Diagnòstic d'una connexió de fibra
 # Demana si l'indicador LOS del terminal òptic està encès i si l'indicador
 # d'Internet del router està encès. Segons aquestes dues dades, indica si cal
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
 # sembla funcionar correctament.
+los = input("Està encès el LOS? (si/no): ")
+internet = input("Està encès l'indicador d'Internet (si/no): ")
+
+if los == "si":
+    print("Cal revisar el cable de fibra")
+elif internet == "no":
+    print("Cal comprovar el servei del proveïdor")
+else:
+    print("La connexió sembla funcionar correctament")
 
 # Exercici 5: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
 # de comunicacions. Indica si el nivell és crític (menys del 20 %), baix
 # (del 20 % al 49 %) o suficient (50 % o més). Rebutja valors fora del rang
 # del 0 % al 100 %.
+bateria = int(input("Percentatge de bateria (0-100): "))
+if bateria < 20:
+    print("Nivell crític")
+elif bateria < 49:
+    print("Nivell baix")
+elif bateria >= 50 and bateria <= 100:
+    print("Nivell suficient")
+else:
+    print("Valor fora de rang")
 
 # Exercici 6: Qualitat d'una connexió de xarxa
 # Demana la latència en mil·lisegons i el percentatge de paquets perduts.
@@ -39,6 +84,19 @@
 # i la pèrdua és de l'1 % o menys; bona si és de 80 ms o menys i la pèrdua és
 # del 3 % o menys; acceptable si és de 150 ms o menys i la pèrdua és del 5 %
 # o menys; en qualsevol altre cas, deficient.
+latencia = float(input("Latència (en ms): "))
+percentatge = int(input("Percentatge de paquets perduts (0-100): "))
+if latencia < 0 or percentatge < 0 or percentatge > 100:
+    print("Valor fora de rang")
+elif latencia <= 30 and percentatge <= 1:
+    print("Connexió excel·lent")
+elif latencia <= 80 and percentatge <= 3:
+    print("Connexió bona")
+elif latencia <= 150 and percentatge <= 5:
+    print("Connexió acceptable")
+else:
+    print("Connexió deficient")
+
 
 # Exercici 7: Cost mensual d'un pla de dades
 # Demana el tipus de pla (bàsic o plus) i el consum mensual en GB.
@@ -46,6 +104,27 @@
 # El pla plus costa 20 € i inclou 30 GB; cada GB addicional costa 0,75 €.
 # Rebutja un consum negatiu o un tipus de pla desconegut. Calcula i mostra el
 # cost total, tenint en compte que no es cobra l'excés si no se supera el límit.
+pla = str(input("Tipus de pla (basic/plus): "))
+consum = int(input("Consum mensual de GB: "))
+total = 0
+
+if consum < 0:
+    print("Error: Consum negatiu")
+else:
+    if pla == "basic":
+        if consum <= 10:
+            print("El pla bàsic costará 10 €")
+        else: 
+            total = (consum - 10) * 1.5 + 10
+            print(f"El pla costará {total} €")
+    elif pla == "plus":
+        if consum <= 30:
+            print("El pla plus costarà 20 €")
+        else:
+            total = (consum - 30) * 0.75 + 20
+            print(f"El pla costarà {total} €")
+
+
 
 # Exercici 8: Accés a un compte de client
 # Demana si el compte està actiu, si la contrasenya és correcta i si el codi

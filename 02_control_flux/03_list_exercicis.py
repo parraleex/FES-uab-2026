@@ -7,11 +7,20 @@
 # missatge = ["C", "o", "d", "i", " ", "s", "e", "c", "r", "e", "t"]
 # Fent servir slicing i concatenació, crea una llista nova que contingui només
 # el missatge "secret".
+missatge = ["C", "o", "d", "i", " ", "s", "e", "c", "r", "e", "t"]
+llista_secret = missatge[5:]
+print(f"Slicing pur: {llista_secret}")
+
+llista_secret_concat = missatge[5:8] + missatge[8:]
+print(f"Slicing i concatenació: {llista_secret_concat}")
 
 # Exercici 2: Intercanvi de posicions
 # Donada la llista següent:
 # nombres = [10, 20, 30, 40, 50]
 # Intercanvia la primera i l'última posició fent servir només l'assignació per índex.
+nombres = [10, 20, 30, 40, 50]
+nombres[0], nombres[-1] = nombres[-1], nombres[0]
+print(f"Llista intercanviada: {nombres}")
 
 # Exercici 3: L'entrepà de llistes
 # Donades les llistes següents:
