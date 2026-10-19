@@ -57,3 +57,10 @@ print(f"L'element central és {element_central}")
 # Donada una llista, inverteix-ne només la primera meitat (fent servir slicing
 # i concatenació).
 # Exemple: llista = [1, 2, 3, 4, 5, 6] -> Resultat: [3, 2, 1, 4, 5, 6]
+
+llista = [1, 2, 3, 4, 5, 6]
+meitat = len(llista) // 2
+primera_meitat_invertida = llista[:meitat][::-1]
+segona_meitat = llista[meitat:]
+resultat = primera_meitat_invertida + segona_meitat
+print(resultat)
