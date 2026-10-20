@@ -61,7 +61,19 @@ print(f"Hi ha el 7: {set}")
 # Crea una referència a la llista original anomenada referencia.
 # Modifica a 10 el primer element de la llista referencia.
 # Imprimeix les quatre llistes (original, copia_1, copia_2 i referencia) i observa'n els canvis.
+original = [1, 2, 3]
+copia_1 = original[:]
+copia_2 = original.copy()
+referencia = original
+referencia[0] = 10
+print(original)
+print(copia_1)
+print(copia_2)
+print(referencia)
 
 # Exercici 6: Ordenar cadenes sense distingir entre majúscules i minúscules
 # Crea una llista amb les cadenes següents: ["Poma", "pera", "PLÀTAN", "taronja"].
 # Ordena la llista sense distingir entre majúscules i minúscules.
+llista = ["Poma", "pera", "PLÀTAN", "taronja"]
+llista.sort(key=str.lower)
+print(llista)

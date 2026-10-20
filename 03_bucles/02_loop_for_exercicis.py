@@ -4,6 +4,12 @@
 
 # Exercici 1: Imprimir números parells
 # Imprimeix tots els números parells del 2 al 20 (inclosos) fent servir un bucle for.
+#for numero in range(2, 21):
+#    print(numero)
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+for numero in numeros:
+    if numero % 2 == 0:
+        print(numero)
 
 # Exercici 2: Calcular la mitjana d'una llista
 # Donada la llista de números següent:
