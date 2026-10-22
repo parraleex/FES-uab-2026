@@ -51,3 +51,10 @@ print (paraules_llargues)
 # paraules = ["casa", "arbre", "sol", "elefant", "lluna", "cotxe"]
 # Demana a l'usuari que introdueixi una lletra.
 # Compta quantes paraules de la llista comencen per aquesta lletra (sense diferenciar majúscules/minúscules).
+paraules = ["casa", "arbre", "sol", "elefant", "lluna", "cotxe"]
+lletra  = input("Introdueix una lletra: ")
+comptador = 0
+for paraula in paraules:
+    if paraula.startswith(lletra):
+        comptador += 1
+print(f"Hi ha {comptador} paraules que comencen per la lletra {lletra}")
