@@ -11,7 +11,8 @@ total_paquets = paquets_rebuts + 1200
 print("Total: ", total_paquets)
 
 # Exercici 2
-# Demana a l'usuari la velocitat d'una connexió en Mbps. Converteix el valor
+# Demana a l'usuari la velocitat d'una connexió en Mbps. 10
+# Converteix el valor
 # introduït a un nombre decimal i calcula la velocitat equivalent en MB/s
 # dividint-la per 8. Mostra el resultat.
 mbps_rebuts = float(input("Quina velocitat en Mbps? "))

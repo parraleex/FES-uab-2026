@@ -123,6 +123,8 @@ else:
         else:
             total = (consum - 30) * 0.75 + 20
             print(f"El pla costarà {total} €")
+    else:
+        print("Pla no reconegut")
 
 
 
@@ -133,6 +135,20 @@ else:
 # està desactivat, perquè la contrasenya és incorrecta o perquè falla el codi;
 # si totes les comprovacions necessàries són correctes, permet l'accés.
 
+compte = input("Compte actiu? (si/no) ")
+if compte == "si":
+    contrasenya = input("Contrasenya correcta? (si/no) ")
+    if contrasenya == "si":
+        codi = input("Codi de doble verificació correcte? (si/no) ")
+        if codi == "si":
+            print("Accés permés")
+        else:
+            print("Codi de doble verificació incorrecte")    
+    else:
+        print("Contrasenya incorrecte")
+else:
+    print("Compte inactiu")
+
 # Exercici 9: Diagnòstic d'un router
 # Demana si el router està encès, si l'indicador LOS del terminal òptic està
 # encès i si l'indicador d'Internet del router està encès. Indica primer si
@@ -140,9 +156,45 @@ else:
 # de fibra (LOS encès), si cal contactar amb el proveïdor (Internet apagat) o
 # si la connexió funciona correctament. Considera els casos en aquest ordre.
 
+router = input("El router està encés? (si/no)")
+los = input("L'indicador LOS del terminal òptic està encés? (si/no)")        
+indicador = input("L'indicador d'Internet del router està encés? (si/no)")
+
+if router == "si" or router == "no":
+    if los == "si" or los == "no":
+        if indicador == "si" or indicador == "no":
+            if router == "no":
+                print("El router no està encés")
+            elif los == "no":
+                print("L'indicador LOS del terminal òptic no està encés")
+            elif indicador == "no":
+                print("L'indicador d'Internet del router no està encés")
+            else:
+                print("La connexió funciona perfectament")
+        else:
+            print("Indicador d'Internet del router no detectat")
+    else:
+        print("Indicador LOS del terminal òptic no detectat")
+else:
+    print("Router no detectat")
+
 # Exercici 10: Prioritat d'una incidència de xarxa
 # Demana si la incidència afecta un servei crític, el nombre d'usuaris afectats
 # i si hi ha una alternativa de connexió disponible. Rebutja un nombre negatiu
 # d'usuaris. Assigna prioritat crítica si afecta un servei crític i no hi ha
 # alternativa, o si afecta almenys 50 usuaris i no hi ha alternativa; alta si
 # afecta almenys 10 usuaris o un servei crític; en qualsevol altre cas, baixa.
+
+incidencia = input("La incidència afecta a un servei crític? (si/no)")
+usuaris = int(input("Nombre d'usuaris afectats: "))
+
+alternativa = input("Hi ha alternativa de connexio disponible? (si/no)")
+if usuaris < 0:
+    print("Nombre d'usuaris incorrecte")
+else:
+    if (incidencia == "si" and alternativa == "no") or (usuaris >= 50 and alternativa == "no"):
+        print("Prioritat crítica")
+    elif incidencia == "si" or usuaris >= 10:
+        print("Prioritat alta")
+    else:
+        print("Prioritat baixa")
