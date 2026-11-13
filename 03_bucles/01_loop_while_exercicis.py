@@ -16,9 +16,9 @@ suma = 0
 while comptador <= 20:
     if comptador % 2 == 0:
         suma += comptador
-    elif comptador == 1:
-        suma += comptador
-    comptador += 1
+        comptador += 1
+    else:
+        comptador += 1
 print(f"La suma és de: {suma}")
 
 
@@ -52,7 +52,6 @@ print(f"El factorial es: {numero}")
 # Fes servir un bucle while per continuar demanant la contrasenya fins que compleixi els requisits.
 # Si la contrasenya és vàlida, imprimeix "Contrasenya vàlida".
 
-contrasenya = ""
 contrasenya = input("Introdueix una contrasenya: ")
 
 while len(contrasenya) < 8:
